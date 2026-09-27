@@ -132,7 +132,7 @@ export default function Console() {
     dim: "text-faint",
     ink: "text-muted",
     accent: "text-accent",
-    warn: "text-[#e8b34b]",
+    warn: "text-ink italic",
   };
 
   return (

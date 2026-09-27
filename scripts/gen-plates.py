@@ -18,12 +18,12 @@ import random
 W, H = 860, 496
 OUT = pathlib.Path(__file__).resolve().parent.parent / "public" / "plates"
 
-BG = "#071228"
-DIM = "rgba(158,197,255,0.14)"
-MID = "rgba(158,197,255,0.30)"
-BRIGHT = "rgba(210,228,255,0.55)"
-ACC = "#ff7a1a"
-ACC_DIM = "rgba(255,122,26,0.34)"
+BG = "#0d0d0d"
+DIM = "rgba(255,255,255,0.13)"
+MID = "rgba(255,255,255,0.28)"
+BRIGHT = "rgba(255,255,255,0.52)"
+ACC = "#ffffff"
+ACC_DIM = "rgba(255,255,255,0.35)"
 
 
 def head(extra=""):

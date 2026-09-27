@@ -15,7 +15,7 @@ export default function Ticker() {
   return (
     <div
       aria-hidden="true"
-      className="absolute right-0 bottom-0 left-0 overflow-hidden border-y border-[rgba(140,185,255,0.25)] bg-bg/60 py-2.5 backdrop-blur-sm"
+      className="absolute right-0 bottom-0 left-0 overflow-hidden border-y border-white/15 bg-bg/60 py-2.5 backdrop-blur-sm"
     >
       <div className="ticker flex w-max">
         {[0, 1].map((half) => (

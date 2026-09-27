@@ -15,9 +15,9 @@ function Crosshair({ className }: { className: string }) {
       aria-hidden="true"
       className={`absolute ${className}`}
     >
-      <line x1="8.5" y1="0" x2="8.5" y2="17" stroke="rgba(150,195,255,0.8)" strokeWidth="1" />
-      <line x1="0" y1="8.5" x2="17" y2="8.5" stroke="rgba(150,195,255,0.8)" strokeWidth="1" />
-      <circle cx="8.5" cy="8.5" r="4" fill="none" stroke="rgba(150,195,255,0.5)" strokeWidth="1" />
+      <line x1="8.5" y1="0" x2="8.5" y2="17" stroke="rgba(255,255,255,0.6)" strokeWidth="1" />
+      <line x1="0" y1="8.5" x2="17" y2="8.5" stroke="rgba(255,255,255,0.6)" strokeWidth="1" />
+      <circle cx="8.5" cy="8.5" r="4" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="1" />
     </svg>
   );
 }
@@ -29,7 +29,7 @@ export default function BlueprintSheet() {
       <div className="bp-grid absolute inset-0" />
 
       {/* moldura da folha — só onde há margem de sobra para ela */}
-      <div className="absolute inset-2.5 hidden border border-[rgba(140,185,255,0.3)] sm:block" />
+      <div className="absolute inset-2.5 hidden border border-[rgba(255,255,255,0.22)] sm:block" />
 
       {/* miras de registro nos quatro cantos */}
       <div className="hidden sm:block">

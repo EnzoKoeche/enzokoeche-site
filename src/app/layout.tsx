@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono, Space_Grotesk, Unbounded } from "next/font/google";
+import { Archivo, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import BlueprintSheet from "@/components/BlueprintSheet";
 import { LangProvider } from "@/components/LangProvider";
@@ -21,10 +21,10 @@ const mono = JetBrains_Mono({
 });
 
 /* só para nome e títulos de seção — presença, não texto corrido */
-const brand = Unbounded({
+const brand = Archivo({
   variable: "--font-brand",
   subsets: ["latin"],
-  weight: ["500", "700"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#061021",
+  themeColor: "#0a0a0a",
   colorScheme: "dark",
 };
 
