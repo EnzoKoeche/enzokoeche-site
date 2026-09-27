@@ -107,6 +107,31 @@ export const console_ = {
   },
 };
 
+/* ── fita técnica ──────────────────────────────────────────────────────── */
+
+export const ticker: Record<Lang, string[]> = {
+  pt: [
+    "sistemas que pensam",
+    "rag com citação obrigatória",
+    "eval-first",
+    "bi de obras",
+    "agentes de ia em produção",
+    "humano decide",
+    "reversível por padrão",
+    "curitiba · 25°26′s 49°16′w",
+  ],
+  en: [
+    "systems that think",
+    "rag with mandatory citation",
+    "eval-first",
+    "construction bi",
+    "ai agents in production",
+    "humans decide",
+    "reversible by default",
+    "curitiba · 25°26′s 49°16′w",
+  ],
+};
+
 /* ── sobre ─────────────────────────────────────────────────────────────── */
 
 export const about = {

@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { JetBrains_Mono, Space_Grotesk, Unbounded } from "next/font/google";
 import "./globals.css";
 import BlueprintSheet from "@/components/BlueprintSheet";
 import { LangProvider } from "@/components/LangProvider";
+import MouseGlow from "@/components/MouseGlow";
 import PlateDrift from "@/components/PlateDrift";
 import Header from "@/components/Header";
 import { profile } from "@/lib/content";
@@ -16,6 +17,14 @@ const display = Space_Grotesk({
 const mono = JetBrains_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
+  display: "swap",
+});
+
+/* só para nome e títulos de seção — presença, não texto corrido */
+const brand = Unbounded({
+  variable: "--font-brand",
+  subsets: ["latin"],
+  weight: ["500", "700"],
   display: "swap",
 });
 
@@ -60,7 +69,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#08090b",
+  themeColor: "#061021",
   colorScheme: "dark",
 };
 
@@ -79,7 +88,7 @@ const jsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${display.variable} ${mono.variable} antialiased`}>
+      <body className={`${display.variable} ${mono.variable} ${brand.variable} antialiased`}>
         {/* Runs during parse, before first paint: opts the page into the
             hidden-then-reveal behaviour only when JS is actually running. */}
         <script
@@ -93,6 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <BlueprintSheet />
         <PlateDrift />
+        <MouseGlow />
         <LangProvider>
           <Header />
           <main>{children}</main>
