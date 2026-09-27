@@ -40,6 +40,7 @@ export const nav: { id: string; label: Bi }[] = [
   { id: "stack", label: { pt: "Stack", en: "Stack" } },
   { id: "projetos", label: { pt: "Projetos", en: "Work" } },
   { id: "metodo", label: { pt: "Método", en: "Method" } },
+  { id: "perguntar", label: { pt: "Perguntar", en: "Ask" } },
   { id: "curriculo", label: { pt: "Currículo", en: "Résumé" } },
   { id: "assinaturas", label: { pt: "Assinaturas", en: "Guestbook" } },
   { id: "contato", label: { pt: "Contato", en: "Contact" } },
@@ -583,6 +584,49 @@ export const work = {
   moreLabel: { pt: "Ver todos os repositórios", en: "Browse all repositories" },
 };
 
+/* ── perguntar (agente local) ──────────────────────────────────────────── */
+
+export const ask = {
+  heading: { pt: "Pergunte ao sistema", en: "Ask the system" },
+  index: "05",
+  note: {
+    pt: "Um agente de retrieval rodando inteiro no seu navegador — sem servidor, sem chave, sem a pergunta sair da página. Toda resposta cita a fonte; sem base recuperada, ele diz que não encontrou. É o princípio 01 em funcionamento, nesta página.",
+    en: "A retrieval agent running entirely in your browser — no server, no key, your question never leaves the page. Every answer cites its source; with no retrieved basis, it says it didn't find one. Principle 01, running on this very page.",
+  } satisfies Bi,
+  placeholder: {
+    pt: "pergunte algo sobre mim…",
+    en: "ask something about me…",
+  } satisfies Bi,
+  suggestionsLabel: { pt: "Sugestões", en: "Try" } satisfies Bi,
+  suggestions: {
+    pt: [
+      "O que ele faz na Lyx?",
+      "Como ele evita alucinação?",
+      "Quais projetos têm evals?",
+      "Qual é a stack dele?",
+      "O que ele faz fora do trabalho?",
+    ],
+    en: [
+      "What does he do at Lyx?",
+      "How does he prevent hallucination?",
+      "Which projects have evals?",
+      "What's his stack?",
+      "What does he do outside work?",
+    ],
+  },
+  sourceLabel: { pt: "fonte", en: "source" } satisfies Bi,
+  relatedLabel: { pt: "relacionado", en: "related" } satisfies Bi,
+  scoreLabel: { pt: "score", en: "score" } satisfies Bi,
+  notFound: {
+    pt: "não encontrei isso no dossiê — e prefiro dizer isso a inventar. Pergunta sobre trabalho, projetos, método ou stack.",
+    en: "I didn't find that in the dossier — and I'd rather say so than make something up. Ask about work, projects, method or stack.",
+  } satisfies Bi,
+  how: {
+    pt: "como funciona: BM25 sobre um dossiê versionado no repositório, executado no seu navegador. Recuperação abaixo do piso vira recusa, não resposta.",
+    en: "how it works: BM25 over a dossier versioned in the repo, executed in your browser. Retrieval below the floor becomes a refusal, not an answer.",
+  } satisfies Bi,
+};
+
 /* ── currículo ─────────────────────────────────────────────────────────── */
 
 export type TimelineItem = {
@@ -666,7 +710,7 @@ export const education: TimelineItem[] = [
 
 export const resume = {
   heading: { pt: "Currículo", en: "Résumé" },
-  index: "05",
+  index: "06",
   experienceLabel: { pt: "Experiência", en: "Experience" },
   educationLabel: { pt: "Formação", en: "Education" },
   download: { pt: "Baixar CV (PDF)", en: "Download CV (PDF)" },
@@ -677,7 +721,7 @@ export const resume = {
 
 export const guestbook = {
   heading: { pt: "Assinaturas", en: "Guestbook" },
-  index: "06",
+  index: "07",
   note: {
     pt: "Trabalhou comigo, estudou comigo ou só passou por aqui? Assina aí — de próprio punho.",
     en: "Worked with me, studied with me, or just passing through? Sign it — in your own hand.",
@@ -734,7 +778,7 @@ export const guestbook = {
 
 export const contact = {
   heading: { pt: "Contato", en: "Contact" },
-  index: "07",
+  index: "08",
   title: {
     pt: "Tem um problema difícil?",
     en: "Got a hard problem?",
