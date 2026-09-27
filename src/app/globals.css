@@ -6,6 +6,8 @@
   --color-muted: #8b9096;
   --color-faint: #454a52;
   --color-accent: #00e5c0;
+  /* traço estrutural da prancha — azul de blueprint, sempre em alpha baixo */
+  --color-blueprint: #7da2ff;
 
   --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono), ui-monospace, "SF Mono", monospace;
@@ -79,6 +81,75 @@ body {
 /* ---- the one line that separates everything ---- */
 .rule {
   border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* ---- prancha de engenharia ---- */
+
+/* Malha da prancha: quadrícula fina + módulo maior, como papel milimetrado.
+   Fica sob o vignette do PlateDrift, então os valores rodam mais altos do que
+   o resultado percebido. */
+.bp-grid {
+  background-image:
+    linear-gradient(rgba(125, 162, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 162, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(rgba(125, 162, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 162, 255, 0.022) 1px, transparent 1px);
+  background-size:
+    120px 120px,
+    120px 120px,
+    24px 24px,
+    24px 24px;
+}
+
+/* Cota: a linha de seção ganha os tiques perpendiculares de desenho técnico. */
+.cota {
+  position: relative;
+}
+.cota::before,
+.cota::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 1px;
+  height: 9px;
+  background: rgba(125, 162, 255, 0.55);
+}
+.cota::before {
+  left: 0;
+}
+.cota::after {
+  right: 0;
+}
+
+/* Etiqueta de folha (FL. 03/07) ao lado do título da seção. */
+.folha {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--color-faint);
+  border: 1px solid rgba(125, 162, 255, 0.22);
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+/* Carimbo: o quadro de título da prancha, com os traços de tabela. */
+.carimbo {
+  border: 1px solid rgba(125, 162, 255, 0.28);
+  font-family: var(--font-mono);
+}
+.carimbo-cell {
+  border-color: rgba(125, 162, 255, 0.18);
+}
+.carimbo-label {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-faint);
+}
+.carimbo-value {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
 }
 
 /* small caps label, the only decorative type in the system */

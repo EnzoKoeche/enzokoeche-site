@@ -12,9 +12,12 @@ export default function Hero() {
       id="top"
       className="relative mx-auto flex min-h-[100svh] max-w-5xl flex-col justify-center px-6 pt-28 pb-20 sm:px-8"
     >
-      <div className="enter label flex items-center gap-4">
+      <div className="enter label flex flex-wrap items-center gap-4">
         <span className="h-px w-8 bg-faint" />
         {t(profile.location)}
+        <span className="hidden text-[10px] tracking-[0.18em] text-faint/80 sm:inline">
+          25°26′S 49°16′W · ALT 934 M
+        </span>
       </div>
 
       <h1 className="enter mt-8 font-display text-[clamp(2.6rem,9vw,6.5rem)] leading-[0.95] font-light tracking-[-0.03em]">

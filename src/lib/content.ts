@@ -704,6 +704,29 @@ export const contact = {
   copied: { pt: "copiado", en: "copied" },
 };
 
+/* ── carimbo ───────────────────────────────────────────────────────────── */
+
+/** Quadro de título da prancha — o rodapé do site como carimbo de projeto. */
+export const carimbo = {
+  projeto: { pt: "Projeto", en: "Project" } satisfies Bi,
+  projetoValue: {
+    pt: "Portfólio — Enzo Koeche Castagna",
+    en: "Portfolio — Enzo Koeche Castagna",
+  } satisfies Bi,
+  conteudo: { pt: "Conteúdo", en: "Contents" } satisfies Bi,
+  conteudoValue: {
+    pt: "Engenharia de software · IA aplicada",
+    en: "Software engineering · applied AI",
+  } satisfies Bi,
+  local: { pt: "Local", en: "Location" } satisfies Bi,
+  localValue: "Curitiba/PR · 25°26′S 49°16′W",
+  data: { pt: "Data", en: "Date" } satisfies Bi,
+  escala: { pt: "Escala", en: "Scale" } satisfies Bi,
+  escalaValue: "1:1",
+  rev: { pt: "Rev.", en: "Rev." } satisfies Bi,
+  folha: { pt: "Folha", en: "Sheet" } satisfies Bi,
+};
+
 export const footer = {
   built: {
     pt: "Feito com Next.js, canvas e cafeína. Sem templates.",
