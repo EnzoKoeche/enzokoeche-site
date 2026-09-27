@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { contact, footer, profile } from "@/lib/content";
+import { contact, profile } from "@/lib/content";
+import Carimbo from "./Carimbo";
 import { useLang } from "./LangProvider";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
@@ -66,11 +67,8 @@ export default function Contact() {
         ))}
       </Reveal>
 
-      <footer className="rule mt-24 flex flex-col gap-2 pt-8 sm:flex-row sm:justify-between">
-        <p className="label">
-          © {new Date().getFullYear()} {profile.name}
-        </p>
-        <p className="label">{t(footer.built)}</p>
+      <footer>
+        <Carimbo />
       </footer>
     </section>
   );

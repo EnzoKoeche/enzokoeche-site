@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import BlueprintSheet from "@/components/BlueprintSheet";
 import { LangProvider } from "@/components/LangProvider";
 import PlateDrift from "@/components/PlateDrift";
 import Header from "@/components/Header";
@@ -90,6 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <BlueprintSheet />
         <PlateDrift />
         <LangProvider>
           <Header />
