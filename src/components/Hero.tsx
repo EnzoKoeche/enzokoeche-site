@@ -3,6 +3,7 @@
 import { hero, profile } from "@/lib/content";
 import Console from "./Console";
 import { useLang } from "./LangProvider";
+import Ticker from "./Ticker";
 import { DecodeText, RotatingText } from "./TextFx";
 
 export default function Hero() {
@@ -21,11 +22,11 @@ export default function Hero() {
         </span>
       </div>
 
-      <h1 className="enter mt-8 font-display text-[clamp(2.6rem,9vw,6.5rem)] leading-[0.95] font-light tracking-[-0.03em]">
+      <h1 className="enter mt-8 font-brand text-[clamp(2rem,6.6vw,5.2rem)] leading-[1.04] font-bold tracking-[-0.01em] uppercase">
         <span className="block text-ink">
           <DecodeText text="Enzo Koeche" delay={200} speed={38} />
         </span>
-        <span className="block text-muted">
+        <span className="outline-text block">
           <DecodeText text="Castagna" delay={480} speed={38} />
         </span>
       </h1>
@@ -72,6 +73,8 @@ export default function Hero() {
       <div className="mt-14">
         <Console />
       </div>
+
+      <Ticker />
     </section>
   );
 }

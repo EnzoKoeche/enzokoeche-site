@@ -47,7 +47,7 @@ function Track({
             aria-hidden="true"
             loading="eager"
             decoding="async"
-            className="block shrink-0 rounded-sm ring-1 ring-white/10"
+            className="block shrink-0 rounded-sm ring-1 ring-[rgba(140,185,255,0.18)]"
             style={{ width: `${430 * scale}px`, height: `${248 * scale}px` }}
           />
         ))}
@@ -84,7 +84,7 @@ export default function PlateDrift() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 72% 58% at 44% 48%, rgba(8,9,11,0.93) 0%, rgba(8,9,11,0.74) 48%, rgba(8,9,11,0.12) 100%)",
+            "radial-gradient(ellipse 72% 58% at 44% 48%, rgba(6,16,33,0.92) 0%, rgba(6,16,33,0.72) 48%, rgba(6,16,33,0.1) 100%)",
         }}
       />
       <div className="grain absolute inset-0 opacity-[0.16]" />
