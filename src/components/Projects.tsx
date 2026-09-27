@@ -191,14 +191,38 @@ export default function Projects() {
 
   const clear = useCallback(() => setHovered(null), []);
 
+  const featured = projects.filter((p) => p.featured);
+  const archive = projects.filter((p) => !p.featured);
+
   return (
     <section id="projetos" className="mx-auto max-w-5xl px-6 py-28 sm:px-8 sm:py-40">
       <SectionHeading index={work.index} title={t(work.heading)} note={t(work.note)} />
 
       <div className="mt-12">
-        {projects.map((p, i) => (
+        <Reveal>
+          <p className="label mb-2">{t(work.featuredLabel)}</p>
+        </Reveal>
+        {featured.map((p, i) => (
           <Reveal key={p.slug} delay={Math.min(i, 4) * 60}>
             <Row p={p} index={i} onEnter={() => setHovered(p)} onLeave={clear} />
+          </Reveal>
+        ))}
+        <div className="rule" />
+      </div>
+
+      {/* o resto continua público, mas sem disputar atenção com o destaque */}
+      <div className="mt-16">
+        <Reveal>
+          <p className="label mb-2">{t(work.archiveLabel)}</p>
+        </Reveal>
+        {archive.map((p, i) => (
+          <Reveal key={p.slug} delay={Math.min(i, 4) * 40}>
+            <Row
+              p={p}
+              index={featured.length + i}
+              onEnter={() => setHovered(p)}
+              onLeave={clear}
+            />
           </Reveal>
         ))}
         <div className="rule" />

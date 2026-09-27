@@ -127,7 +127,7 @@ export const about = {
   // Números conferíveis: quem abrir o GitHub tem que bater a conta.
   // Ver princípio 04 em `method` — número que ninguém verifica é decoração.
   stats: [
-    { value: "12", label: { pt: "repositórios públicos", en: "public repos" } },
+    { value: "13", label: { pt: "repositórios públicos", en: "public repos" } },
     { value: "6", label: { pt: "linguagens em produção", en: "languages shipped" } },
     {
       value: "100%",
@@ -451,6 +451,37 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "enzokoeche-site",
+    image: "/plates/contours.svg",
+    name: "Este site",
+    year: "2026",
+    tags: ["Next.js", "TypeScript", "BM25", "Sem templates"],
+    featured: true,
+    repo: "https://github.com/EnzoKoeche/enzokoeche-site",
+    blurb: {
+      pt: "A prancha que você está lendo: telemetria ao vivo, agente de retrieval no navegador e carimbo com a revisão real do build.",
+      en: "The sheet you're reading: live telemetry, an in-browser retrieval agent and a title block carrying the build's real revision.",
+    },
+    detail: {
+      pt: "O portfólio como demonstração dos próprios princípios: o console do hero lê atividade pública real do GitHub (sem chave, sem backend), a seção Perguntar roda BM25 no seu navegador com citação obrigatória e recusa honesta, e o carimbo do rodapé imprime o commit que gerou o build. Eval do agente no repositório: 19/19 PASS.",
+      en: "The portfolio as a demo of its own principles: the hero console reads real public GitHub activity (no key, no backend), the Ask section runs BM25 in your browser with mandatory citation and honest refusal, and the footer title block prints the commit that produced the build. Agent eval in the repo: 19/19 PASS.",
+    },
+    highlights: {
+      pt: [
+        "Retrieval BM25 100% client-side, índice bilíngue",
+        "Recusa abaixo do piso de recuperação, garantida por eval",
+        "Telemetria do GitHub sem backend",
+        "Revisão do build no carimbo da prancha",
+      ],
+      en: [
+        "Fully client-side BM25 retrieval, bilingual index",
+        "Refusal below the retrieval floor, enforced by an eval",
+        "GitHub telemetry with no backend",
+        "Build revision printed on the title block",
+      ],
+    },
+  },
+  {
     slug: "shadowmesh",
     image: "/plates/mesh.svg",
     name: "ShadowMesh",
@@ -582,6 +613,8 @@ export const work = {
   } satisfies Bi,
   repoLabel: { pt: "Código", en: "Code" },
   moreLabel: { pt: "Ver todos os repositórios", en: "Browse all repositories" },
+  featuredLabel: { pt: "Em destaque", en: "Featured" },
+  archiveLabel: { pt: "Arquivo", en: "Archive" },
 };
 
 /* ── perguntar (agente local) ──────────────────────────────────────────── */
@@ -637,19 +670,24 @@ export type TimelineItem = {
 };
 
 // ⚠️ CONFERIR: só as descrições da Milkup e do freela seguem sendo palpite meu —
-// a Lyx e a formação já foram confirmadas pelo Enzo.
+// a Lyx (bullets conferidos em set/2026) e a formação já foram confirmadas.
 export const experience: TimelineItem[] = [
   {
     period: { pt: "Ago 2026 — atual", en: "Aug 2026 — present" },
     role: { pt: "Software Engineer · IA Aplicada", en: "Software Engineer · Applied AI" },
     org: { pt: "Lyx Engenharia", en: "Lyx Engenharia" },
     bullets: {
-      // ⚠️ CONFERIR: trocar por sistemas/stack reais assim que você estiver dentro.
       pt: [
         "Engenharia de software e IA aplicada na maior construtora do programa Minha Casa Minha Vida do Sul do país.",
+        "Frente de Controladoria do hub interno de engenharia: backend TypeScript com PostgreSQL, front em Next.js.",
+        "BI de planejamento e de qualidade de obras, com ETL em Python e modelagem de indicadores de cronograma.",
+        "Agentes de IA no ciclo de desenvolvimento: revisão automática de PR e fila de merge com janela de deploy.",
       ],
       en: [
         "Software engineering and applied AI at the largest homebuilder in Brazil's federal affordable-housing programme in the south of the country.",
+        "Controllership front of the internal engineering hub: TypeScript backend on PostgreSQL, Next.js front end.",
+        "Construction planning and quality BI, with Python ETL and schedule-indicator modelling.",
+        "AI agents inside the development cycle: automated PR review and a merge queue with deploy windows.",
       ],
     },
   },
