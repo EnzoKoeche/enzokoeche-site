@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Ask from "@/components/Ask";
 import Contact from "@/components/Contact";
 import Guestbook from "@/components/Guestbook";
 import Hero from "@/components/Hero";
@@ -15,6 +16,7 @@ export default function Home() {
       <Stack />
       <Projects />
       <Method />
+      <Ask />
       <Resume />
       <Guestbook />
       <Contact />
