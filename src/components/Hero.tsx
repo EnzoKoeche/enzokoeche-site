@@ -22,7 +22,7 @@ export default function Hero() {
         </span>
       </div>
 
-      <h1 className="enter mt-8 font-brand text-[clamp(2rem,6.6vw,5.2rem)] leading-[1.04] font-bold tracking-[-0.01em] uppercase">
+      <h1 className="enter mt-8 font-brand text-[clamp(2.3rem,7.6vw,6.4rem)] leading-[0.98] font-bold tracking-[-0.02em] uppercase">
         <span className="block text-ink">
           <DecodeText text="Enzo Koeche" delay={200} speed={38} />
         </span>

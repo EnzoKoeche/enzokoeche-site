@@ -60,7 +60,7 @@ export default function Ask() {
                 </p>
 
                 {e.hits.length === 0 ? (
-                  <p className="mt-2 text-[#e8b34b]">{t(ask.notFound)}</p>
+                  <p className="mt-2 text-ink italic">{t(ask.notFound)}</p>
                 ) : (
                   <div className="mt-2 space-y-3">
                     <p className="text-muted">{e.hits[0].chunk.text[lang]}</p>

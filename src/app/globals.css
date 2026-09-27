@@ -1,16 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* A prancha de verdade: fundo azul de blueprint, traço claro, e o acento é
-     laranja de obra — a cor de quem constrói. */
-  --color-bg: #061021;
-  --color-ink: #eef4ff;
-  --color-muted: #8fa3c8;
-  --color-faint: #44577c;
-  --color-accent: #ff7a1a;
+  /* Prancha monocromática: tinta branca sobre papel preto, nenhuma cor.
+     A hierarquia inteira é peso, tamanho e alpha — como desenho técnico. */
+  --color-bg: #0a0a0a;
+  --color-ink: #f5f5f5;
+  --color-muted: #9a9a9a;
+  --color-faint: #4c4c4c;
+  --color-accent: #ffffff;
   /* traço estrutural da prancha */
-  --color-blueprint: #5ea0ff;
-  --color-sky: #59d8ff;
+  --color-blueprint: #ffffff;
 
   --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
   --font-brand: var(--font-brand), var(--font-display), ui-sans-serif, sans-serif;
@@ -56,10 +55,9 @@ html {
 }
 
 body {
-  /* profundidade de prancha: um brilho azul alto e frio caindo do topo */
+  /* profundidade sem cor: um respiro de luz no topo, nada mais */
   background:
-    radial-gradient(1100px 700px at 72% -12%, #0d2a5c 0%, rgba(13, 42, 92, 0) 60%),
-    radial-gradient(900px 600px at -10% 108%, #0a1f45 0%, rgba(10, 31, 69, 0) 55%),
+    radial-gradient(1100px 700px at 72% -12%, rgba(255, 255, 255, 0.05) 0%, transparent 60%),
     var(--color-bg);
   color: var(--color-ink);
   font-family: var(--font-display);
@@ -69,8 +67,8 @@ body {
 }
 
 ::selection {
-  background: var(--color-accent);
-  color: #1a0d02;
+  background: var(--color-ink);
+  color: var(--color-bg);
 }
 
 ::-webkit-scrollbar {
@@ -80,10 +78,10 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1c2c4d;
+  background: #2b2b2b;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2a4070;
+  background: #404040;
 }
 
 /* ---- the one line that separates everything ---- */
@@ -98,10 +96,10 @@ body {
    o resultado percebido. */
 .bp-grid {
   background-image:
-    linear-gradient(rgba(140, 185, 255, 0.13) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(140, 185, 255, 0.13) 1px, transparent 1px),
-    linear-gradient(rgba(140, 185, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(140, 185, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.085) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.085) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.032) 1px, transparent 1px);
   background-size:
     120px 120px,
     120px 120px,
@@ -120,7 +118,7 @@ body {
   top: -4px;
   width: 1px;
   height: 9px;
-  background: rgba(140, 185, 255, 0.7);
+  background: rgba(255, 255, 255, 0.55);
 }
 .cota::before {
   left: 0;
@@ -135,20 +133,20 @@ body {
   font-size: 10px;
   letter-spacing: 0.18em;
   color: var(--color-muted);
-  border: 1px solid rgba(140, 185, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   padding: 4px 8px;
   white-space: nowrap;
 }
 
 /* Carimbo: o quadro de título da prancha, com os traços de tabela. */
 .carimbo {
-  border: 1px solid rgba(140, 185, 255, 0.4);
-  background: rgba(6, 16, 33, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  background: rgba(10, 10, 10, 0.6);
   backdrop-filter: blur(2px);
   font-family: var(--font-mono);
 }
 .carimbo-cell {
-  border-color: rgba(140, 185, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.16);
 }
 .carimbo-label {
   font-size: 9px;
@@ -232,7 +230,7 @@ body {
 @supports (-webkit-text-stroke: 1px #fff) {
   .outline-text {
     color: transparent;
-    -webkit-text-stroke: 1.5px rgba(140, 185, 255, 0.85);
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.75);
   }
 }
 

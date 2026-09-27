@@ -17,7 +17,7 @@ export default function SectionHeading({
   return (
     <Reveal className="rule cota pt-6">
       <div className="flex items-baseline justify-between gap-6">
-        <h2 className="font-brand text-[clamp(1.15rem,2.6vw,1.7rem)] font-medium tracking-[0.02em] text-ink uppercase">
+        <h2 className="font-brand text-[clamp(1.15rem,2.6vw,1.7rem)] font-semibold tracking-[0.01em] text-ink uppercase">
           {title}
         </h2>
         <span className="folha shrink-0">
