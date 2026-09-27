@@ -62,6 +62,50 @@ export const hero = {
   scroll: { pt: "role para explorar", en: "scroll to explore" },
 };
 
+/* ── console do hero ───────────────────────────────────────────────────── */
+
+/**
+ * Telemetria de verdade ou nada: o console lê a atividade pública do GitHub
+ * no navegador de quem visita. Se a leitura falhar, ele diz que falhou —
+ * inventar estado aqui contradiria a seção Método inteira.
+ */
+export const console_ = {
+  title: { pt: "TELEMETRIA · AO VIVO", en: "TELEMETRY · LIVE" } satisfies Bi,
+  boot: {
+    pt: [
+      "$ ekc --boot",
+      "[ok] prancha carregada",
+      "[ok] fonte pública — github.com/EnzoKoeche/enzokoeche-site",
+      "[··] lendo atividade pública do GitHub…",
+    ],
+    en: [
+      "$ ekc --boot",
+      "[ok] sheet loaded",
+      "[ok] public source — github.com/EnzoKoeche/enzokoeche-site",
+      "[··] reading public GitHub activity…",
+    ],
+  },
+  offline: {
+    pt: "[!!] telemetria indisponível agora — sem dado, o console não inventa.",
+    en: "[!!] telemetry unavailable right now — no data, and this console doesn't make data up.",
+  } satisfies Bi,
+  events: {
+    push: { pt: "push", en: "push" },
+    prOpened: { pt: "PR aberta", en: "PR opened" },
+    prMerged: { pt: "PR mergeada", en: "PR merged" },
+    created: { pt: "criado", en: "created" },
+    issue: { pt: "issue", en: "issue" },
+  },
+  commits: { pt: "commits", en: "commits" } satisfies Bi,
+  commit: { pt: "commit", en: "commit" } satisfies Bi,
+  ago: {
+    now: { pt: "agora", en: "now" } satisfies Bi,
+    m: { pt: "min atrás", en: "min ago" } satisfies Bi,
+    h: { pt: "h atrás", en: "h ago" } satisfies Bi,
+    d: { pt: "d atrás", en: "d ago" } satisfies Bi,
+  },
+};
+
 /* ── sobre ─────────────────────────────────────────────────────────────── */
 
 export const about = {

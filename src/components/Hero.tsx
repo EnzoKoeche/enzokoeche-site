@@ -1,6 +1,7 @@
 "use client";
 
 import { hero, profile } from "@/lib/content";
+import Console from "./Console";
 import { useLang } from "./LangProvider";
 import { DecodeText, RotatingText } from "./TextFx";
 
@@ -66,6 +67,10 @@ export default function Hero() {
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
           {t(profile.available)}
         </span>
+      </div>
+
+      <div className="mt-14">
+        <Console />
       </div>
     </section>
   );
